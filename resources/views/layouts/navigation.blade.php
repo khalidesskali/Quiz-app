@@ -5,10 +5,11 @@
             <div>
                 <!-- Navigation Links -->
                 <div class="hidden text-lg font-semibold space-x-8  sm:flex">
-                    <x-nav-link :href="route('dashboard')" >
-                        <div class="text-indigo-600 font-semibold text-lg">
+                    <x-nav-link >
+                        <a :href="{{route('quizzes')}}"
+                            class="text-indigo-600 font-semibold text-lg">
                             <span>Code</span>Quiz
-                        </div>
+                        </a>
                     </x-nav-link>
                 </div>
             </div>
@@ -62,7 +63,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="route('quizzes')" >
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
